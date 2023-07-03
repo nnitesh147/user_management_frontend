@@ -6,7 +6,7 @@ import { Navigate } from 'react-router-dom';
 
 const Home = () => {
 
-  const { isAuthenticated, user , setisAuthenticated , setuser} = useContext(Context);
+  const { isAuthenticated, user , setisAuthenticated , setuser , loading} = useContext(Context);
 
 
   const logoutHandler = async(e) => {
@@ -21,6 +21,10 @@ const Home = () => {
     } catch (error) {
       alert(error?.response?.data?.message);
     }
+  }
+
+  if(loading){
+    return Loading...
   }
   
   if (!isAuthenticated) {
