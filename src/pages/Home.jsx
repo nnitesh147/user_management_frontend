@@ -24,7 +24,7 @@ const Home = () => {
   }
 
   if(loading){
-    return "Loading...";
+    return;
   }
   
   if (!isAuthenticated) {
