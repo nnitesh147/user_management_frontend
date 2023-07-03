@@ -8,6 +8,7 @@ export const Context = createContext({ isAuthenticated: false });
 const AppWrappper = () => {
   const [isAuthenticated, setisAuthenticated] = useState(false);
   const [user, setuser] = useState({});
+  const [loading , setloading] = useState(false);
 
   return (
     <Context.Provider
@@ -16,6 +17,8 @@ const AppWrappper = () => {
         setisAuthenticated,
         user,
         setuser,
+         loading,
+         setloading,
       }}
     >
       <App />
