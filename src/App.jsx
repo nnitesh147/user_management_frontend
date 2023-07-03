@@ -8,7 +8,7 @@ import Verify from './pages/Verify'
 import axios from "axios"
 import { Context } from './main'
 
-axios.defaults.baseURL = "http://localhost:3000"
+axios.defaults.baseURL = "https://user-management-backend-eiyb.onrender.com"
 
 const App = () => {
   const { setisAuthenticated, setuser } = useContext(Context);
