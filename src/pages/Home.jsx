@@ -23,9 +23,9 @@ const Home = () => {
     }
   }
 
-  if(loading){
-    return;
-  }
+   if (loading) {
+      return 'Loading...';
+    }
   
   if (!isAuthenticated) {
     return <Navigate to={"/"}/>
