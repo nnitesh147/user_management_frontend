@@ -11,17 +11,20 @@ import { Context } from './main'
 axios.defaults.baseURL = "https://user-management-backend-eiyb.onrender.com"
 
 const App = () => {
-  const { setisAuthenticated, setuser } = useContext(Context);
+  const { setisAuthenticated, setuser , setloading} = useContext(Context);
 
   useEffect(() => {
+    setloading(true);
     axios.get("/profile" , {withCredentials:true})
       .then(response => {
         setisAuthenticated(true);
         setuser(response.data.user);
+        setloading(false);
       })
       .catch(error => {
         setisAuthenticated(false);
         setuser(null);
+        setloading(false);
     })
   }, [])
   
